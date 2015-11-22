@@ -1,0 +1,33 @@
+{
+  "name": "reactjs-starter-kit",
+  "version": "1.0.0",
+  "description": "This is a starter kit for a frontend based on React.js, Redux, Babel/ES2015, Webpack and Mocha.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:clean": "rimraf _book",
+    "docs:prepare": "gitbook install",
+    "docs:build": "npm run docs:prepare && gitbook build -g jtarball/reactjs-starter-kit",
+    "docs:serve": "npm run docs:prepare && gitbook serve",
+    "docs:publish": "npm run docs:clean && npm run docs:build && cd _book && git init && git commit --allow-empty -m 'update book' && git checkout && touch .nojekyll && git add . && git commit -am 'update book' && git push git@github.com:jtarball/reactjs-starter-kit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JTarball/reactjs-starter-kit.git"
+  },
+  "author": "James Tarball",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JTarball/reactjs-starter-kit/issues"
+  },
+  "homepage": "https://github.com/JTarball/reactjs-starter-kit#readme",
+  "dependencies": {
+    "gitbook-cli": "^1.0.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.4.4"
+  }
+}
