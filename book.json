@@ -1,6 +1,6 @@
 {
   "structure": {
-    "summary": "docs/README.md"
+    "summary": "docs/SUMMARY.md"
   },
   "plugins": ["edit-link", "prism", "-highlight", "github"],
   "pluginsConfig": {
