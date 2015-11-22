@@ -1,0 +1,8 @@
+# Docker Compose YML Config
+# This is the development style config
+app:
+    # Use extend to choose specific env settings
+    extends:
+        file: ./docker/app/config/local.yml
+        service: app
+
